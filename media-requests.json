@@ -1,62 +1,160 @@
-{"media_requests":[
-  {
-    "slot_id": "hero_primary",
-    "page": "home",
-    "section": "hero",
-    "category": "custom",
-    "label": "Fondo hero",
-    "theme": "rustico calido, madera y texturas naturales",
-    "query": "",
-    "priority": "high",
-    "source": "generic",
-    "fallback": "GR-AI"
-  },
-  {
-    "slot_id": "about_rustic",
-    "page": "home",
-    "section": "about",
-    "category": "custom",
-    "label": "Imagen nosotros",
-    "theme": "estilo rustico, cocina calida acogedora",
-    "query": "",
-    "priority": "medium",
-    "source": "generic",
-    "fallback": "GR-AI"
-  },
-  {
-    "slot_id": "dish_dumplings",
-    "page": "menu",
-    "section": "menu",
-    "category": "dish",
-    "label": "Dumplings",
-    "theme": "comida para llevar, estilo rustico",
-    "query": "steamed dumplings plate street food eatery",
-    "priority": "high",
-    "source": "search",
-    "fallback": "GR-AI"
-  },
-  {
-    "slot_id": "product_coca_cola",
-    "page": "menu",
-    "section": "menu",
-    "category": "product",
-    "label": "Coca-Cola",
-    "theme": "bebidas refrescantes, estilo casual",
-    "query": "coca cola glass with ice fast food drink",
-    "priority": "high",
-    "source": "search",
-    "fallback": "GR-AI"
-  },
-  {
-    "slot_id": "product_jugos",
-    "page": "menu",
-    "section": "menu",
-    "category": "product",
-    "label": "Jugos naturales",
-    "theme": "jugos frescos, colores vivos",
-    "query": "fresh fruit juice glasses colorful bar",
-    "priority": "medium",
-    "source": "search",
-    "fallback": "GR-AI"
-  }
-]}
+{
+  "media_requests": [
+    {
+      "slot_id": "hero-banner-main",
+      "page": "home",
+      "section": "hero",
+      "category": "gallery",
+      "label": "Banner principal del restaurante",
+      "theme": "calido rustico gastronomico",
+      "query": "rustic mexican restaurant warm ambiance wooden table food overhead shot",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "dish-hamburguesa",
+      "page": "home",
+      "section": "menu",
+      "category": "dish",
+      "label": "Hamburguesa artesanal",
+      "theme": "calido rustico food photography",
+      "query": "gourmet burger artisan bun melted cheese rustic wooden board food photography",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "dish-ramen",
+      "page": "home",
+      "section": "menu",
+      "category": "dish",
+      "label": "Ramen",
+      "theme": "calido rustico food photography",
+      "query": "steaming ramen bowl chopsticks top view food photography warm tones",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "dish-doppling",
+      "page": "home",
+      "section": "menu",
+      "category": "dish",
+      "label": "Doppling",
+      "theme": "calido rustico food photography",
+      "query": "dumplings on plate dipping sauce asian fusion food photography warm lighting",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "product-coca-cola",
+      "page": "home",
+      "section": "menu",
+      "category": "product",
+      "label": "Coca-Cola",
+      "theme": "calido rustico food photography",
+      "query": "glass bottle coca cola condensation rustic table mexican restaurant food photography",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "product-jugos",
+      "page": "home",
+      "section": "menu",
+      "category": "product",
+      "label": "Jugos naturales",
+      "theme": "calido rustico food photography",
+      "query": "fresh natural juice glass fruits tropical mexican restaurant food photography",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "place-exterior",
+      "page": "home",
+      "section": "about",
+      "category": "place",
+      "label": "Exterior del restaurante",
+      "theme": "calido rustico arquitectura",
+      "query": "rustic mexican restaurant exterior facade warm lighting evening",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "place-interior",
+      "page": "home",
+      "section": "about",
+      "category": "place",
+      "label": "Interior del restaurante",
+      "theme": "calido rustico arquitectura",
+      "query": "rustic restaurant interior warm ambient lighting wooden decor mexican style",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "gallery-food-spread",
+      "page": "home",
+      "section": "gallery",
+      "category": "gallery",
+      "label": "Mesa con varios platillos",
+      "theme": "calido rustico food photography",
+      "query": "table spread multiple dishes mexican food variety overhead shot warm tones",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "gallery-cooking",
+      "page": "home",
+      "section": "gallery",
+      "category": "gallery",
+      "label": "Preparacion de alimentos",
+      "theme": "calido rustico cocina",
+      "query": "chef hands preparing food kitchen action shot warm lighting restaurant",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "gallery-drinks",
+      "page": "home",
+      "section": "gallery",
+      "category": "gallery",
+      "label": "Bebidas variadas",
+      "theme": "calido rustico food photography",
+      "query": "assorted drinks cocktails juices mexican restaurant bar display warm tones",
+      "priority": "low",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "gallery-customers",
+      "page": "home",
+      "section": "gallery",
+      "category": "gallery",
+      "label": "Clientes disfrutando",
+      "theme": "calido rustico experiencia",
+      "query": "friends enjoying meal together restaurant happy diners warm ambient lighting",
+      "priority": "low",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "texture-rustic-bg",
+      "page": "home",
+      "section": "hero",
+      "category": "custom",
+      "label": "Textura rustica para fondos",
+      "theme": "calido rustico textura",
+      "query": "rustic dark wood texture seamless warm brown tones background",
+      "priority": "low",
+      "source": "generic",
+      "fallback": "GR-AI"
+    }
+  ]
+}
