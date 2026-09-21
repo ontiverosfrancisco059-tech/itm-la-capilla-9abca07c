@@ -1,0 +1,62 @@
+{"media_requests":[
+  {
+    "slot_id": "hero_primary",
+    "page": "home",
+    "section": "hero",
+    "category": "custom",
+    "label": "Fondo hero",
+    "theme": "rustico calido, madera y texturas naturales",
+    "query": "",
+    "priority": "high",
+    "source": "generic",
+    "fallback": "GR-AI"
+  },
+  {
+    "slot_id": "about_rustic",
+    "page": "home",
+    "section": "about",
+    "category": "custom",
+    "label": "Imagen nosotros",
+    "theme": "estilo rustico, cocina calida acogedora",
+    "query": "",
+    "priority": "medium",
+    "source": "generic",
+    "fallback": "GR-AI"
+  },
+  {
+    "slot_id": "dish_dumplings",
+    "page": "menu",
+    "section": "menu",
+    "category": "dish",
+    "label": "Dumplings",
+    "theme": "comida para llevar, estilo rustico",
+    "query": "steamed dumplings plate street food eatery",
+    "priority": "high",
+    "source": "search",
+    "fallback": "GR-AI"
+  },
+  {
+    "slot_id": "product_coca_cola",
+    "page": "menu",
+    "section": "menu",
+    "category": "product",
+    "label": "Coca-Cola",
+    "theme": "bebidas refrescantes, estilo casual",
+    "query": "coca cola glass with ice fast food drink",
+    "priority": "high",
+    "source": "search",
+    "fallback": "GR-AI"
+  },
+  {
+    "slot_id": "product_jugos",
+    "page": "menu",
+    "section": "menu",
+    "category": "product",
+    "label": "Jugos naturales",
+    "theme": "jugos frescos, colores vivos",
+    "query": "fresh fruit juice glasses colorful bar",
+    "priority": "medium",
+    "source": "search",
+    "fallback": "GR-AI"
+  }
+]}
