@@ -1,216 +1,330 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Capilla · Comida, ramen y bebidas en Monterrey</title>
-  <meta name="description" content="La Capilla — comida rápida, hamburguesas, ramen, dumplings y bebidas en Monterrey. Para llevar, en el sitio o a domicilio. Pide directo por WhatsApp." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%235a2d1a'/%3E%3Ctext x='50' y='66' font-size='52' text-anchor='middle' fill='%23f6e7c9' font-family='Georgia,serif'%3EL%3C/text%3E%3C/svg%3E" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "La Capilla",
-    "servesCuisine": ["Comida rápida", "Ramen", "Dumplings", "Bebidas"],
-    "address": { "@type": "PostalAddress", "addressLocality": "Monterrey", "addressCountry": "MX" },
-    "telephone": "+52 342 343 2324",
-    "openingHours": "Mo-Sa 10:00-20:00",
-    "priceRange": "$$"
-  }
-  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Capilla | Comida rápida, ramen y bebidas - Monterrey</title>
+  <meta name="description" content="La Capilla, restaurante en Monterrey. Hamburguesas, ramen, dumplings, jugos naturales y bebidas. Para comer en el sitio, para llevar o a domicilio. Pide por WhatsApp.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#menu" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Saltar al menú</a>
+  <a class="skip-link" href="#inicio" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Ir al contenido</a>
 
-  <header class="site-header" id="siteHeader">
-    <div class="container header-inner">
-      <a class="brand" href="#inicio" aria-label="La Capilla — inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
-        <span class="brand-mark" aria-hidden="true">L</span>
-        <span class="brand-text">
-          <span class="brand-name">La Capilla</span>
-          <span class="brand-tag">Comida · Ramen · Bebidas</span>
-        </span>
-      </a>
-
-      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-        <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Menú</a>
-        <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Nosotros</a>
-        <a href="#como-pedir" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
-        <a href="#ubicacion" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Ubicación</a>
-        <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Opiniones</a>
-      </nav>
-
-      <div class="header-actions">
-        <button class="cart-button" id="cartButton" type="button" aria-label="Abrir carrito" data-eb-editable="link" data-eb-key="index.button.9" data-eb-role="button" data-eb-kind="link">
-          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
-          <span class="cart-count" id="cartCount" hidden>0</span>
-        </button>
-        <button class="nav-toggle" id="navToggle" type="button" aria-label="Abrir menú de navegación" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.10" data-eb-role="button" data-eb-kind="link">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#inicio" aria-label="La Capilla, inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
+      <span class="brand-mark" aria-hidden="true">La Capilla</span>
+      <span class="brand-tag">Monterrey</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Navegación principal">
+      <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Inicio</a>
+      <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+      <a href="#menu" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Menú</a>
+      <a href="#como-pedir" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
+      <a href="#resenas" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Reseñas</a>
+      <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Contacto</a>
+    </nav>
+    <div class="header-actions">
+      <button class="cart-btn" id="cartToggle" aria-controls="cartPanel" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.9" data-eb-role="button" data-eb-kind="link">
+        <span class="cart-label">Carrito</span>
+        <span class="cart-count" id="cartCount" aria-live="polite">0</span>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú de navegación" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.10" data-eb-role="button" data-eb-kind="link">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
-  <main id="inicio">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-image" aria-hidden="true">
-        <img src="images/casa-rivera.jpg" alt="" / data-eb-editable="image" data-eb-key="index.img.11" data-eb-role="img" data-eb-kind="image">
+  <main>
+    <section class="hero" id="inicio" data-editor="section" data-editor-label="Portada">
+      <div class="hero-bg" role="img" aria-label="Interior del restaurante La Capilla">
+        <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=01c1e148-988b-41fb-aa73-e4638796cc60" alt="Restaurante La Capilla, ambiente cálido y rústico" data-eb-editable="image" data-eb-key="index.img.11" data-eb-role="img" data-eb-kind="image">
       </div>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <p class="hero-eyebrow" data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text">Monterrey · Para llevar, en el sitio o a domicilio</p>
-        <h1 class="hero-title" data-eb-editable="text" data-eb-key="index.h1.13" data-eb-role="h1" data-eb-kind="text">La <em>Capilla</em></h1>
-        <p class="hero-subtitle" data-eb-editable="text" data-eb-key="index.p.14" data-eb-role="p" data-eb-kind="text">Hamburguesas jugosas, ramen humeante, dumplings y las mejores bebidas de la ciudad. Arma tu pedido y llega directo a tu mesa o a tu casa.</p>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow" data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text">Restaurante · Para comer en el sitio, para llevar o a domicilio</p>
+        <h1 data-eb-editable="text" data-eb-key="index.h1.13" data-eb-role="h1" data-eb-kind="text">La Capilla</h1>
+        <p class="hero-subtitle" data-eb-editable="text" data-eb-key="index.p.14" data-eb-role="p" data-eb-kind="text">Hamburguesas, ramen, dumplings y bebidas naturales hechas con estilo rústico y cálido, en Monterrey.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#menu" data-eb-editable="link" data-eb-key="index.a.15" data-eb-role="a" data-eb-kind="link">Ver menú</a>
-          <a class="btn btn-whatsapp" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.16" data-eb-role="a" data-eb-kind="link">
-            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.4 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.06-.26-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
-            Ordenar por WhatsApp
-          </a>
-        </div>
-        <ul class="hero-badges" aria-label="Servicios">
-          <li>Hamburguesas</li>
-          <li>Ramen &amp; dumplings</li>
-          <li>Refrescos y jugos</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- FRANJA DE SERVICIO -->
-    <section class="service-strip" aria-label="Información del servicio">
-      <div class="container service-strip-inner">
-        <div class="service-item">
-          <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-          </span>
-          <div><strong>Horario</strong><span>Lunes a sábado de 10:00 a 20:00</span></div>
-        </div>
-        <div class="service-item">
-          <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          </span>
-          <div><strong>Teléfono</strong><a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.17" data-eb-role="a" data-eb-kind="link">342 343 2324</a></div>
-        </div>
-        <div class="service-item">
-          <span class="service-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          </span>
-          <div><strong>Domicilio</strong><span>Para llevar, en el sitio o a domicilio</span></div>
+          <a class="btn btn-outline" href="https://wa.me/523423432324" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.16" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- MENÚ -->
-    <section class="section" id="menu">
+    <section class="about" id="nosotros" data-editor="section" data-editor-label="Nosotros">
+      <div class="container about-grid">
+        <div class="about-figures">
+          <figure class="about-fig about-fig-main">
+            <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=9ac154e9-7fa6-4506-bd9f-437cfc21379f" alt="Ambiente del restaurante La Capilla" loading="lazy" data-eb-editable="image" data-eb-key="index.img.17" data-eb-role="img" data-eb-kind="image">
+          </figure>
+          <figure class="about-fig about-fig-side">
+            <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=9c82c287-52a7-4ee6-9f33-661c67609010" alt="Vista del mostrador de comida rápida en La Capilla" loading="lazy" data-eb-editable="image" data-eb-key="index.img.18" data-eb-role="img" data-eb-kind="image">
+          </figure>
+        </div>
+        <div class="about-text">
+          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Sobre nosotros</p>
+          <h2 data-eb-editable="text" data-eb-key="index.h2.20" data-eb-role="h2" data-eb-kind="text">Comida rústica, rápida y con sabor de casa</h2>
+          <p data-eb-editable="text" data-eb-key="index.p.21" data-eb-role="p" data-eb-kind="text">La Capilla es un restaurante de comida rápida y bebidas en Monterrey. Preparamos hamburguesas, ramen, dumplings y jugos naturales con un estilo cálido y rústico, pensado para comer en el sitio, llevar o recibir a domicilio.</p>
+          <p data-eb-editable="text" data-eb-key="index.p.22" data-eb-role="p" data-eb-kind="text">Trabajamos todos los días para servir platos contundentes de forma ágil, sin perder el toque casero que nos caracteriza.</p>
+          <ul class="about-points">
+            <li><strong>Comida para llevar</strong> y para comer en el sitio</li>
+            <li><strong>A domicilio</strong> dentro de Monterrey</li>
+            <li><strong>Pedido rápido por WhatsApp</strong>, sin complicaciones</li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/523423432324" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.23" data-eb-role="a" data-eb-kind="link">Escríbenos por WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu" data-editor="section" data-editor-label="Menú">
       <div class="container">
         <div class="section-head">
-          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.18" data-eb-role="p" data-eb-kind="text">Nuestro catálogo</p>
-          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.19" data-eb-role="h2" data-eb-kind="text">Menú</h2>
-          <p class="section-note" data-eb-editable="text" data-eb-key="index.p.20" data-eb-role="p" data-eb-kind="text">Precios de referencia. Arma tu carrito, defínelo y te enlazamos directo a WhatsApp para confirmarlo.</p>
+          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Nuestro menú</p>
+          <h2 data-eb-editable="text" data-eb-key="index.h2.25" data-eb-role="h2" data-eb-kind="text">Comida rápida y bebidas</h2>
+          <p data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">Agrega tus favoritos al carrito y termina tu pedido por WhatsApp. Los precios y combos se confirman al momento de tu pedido.</p>
         </div>
 
-        <div class="filters" id="filters" role="tablist" aria-label="Filtrar menú por categoría">
-          <button type="button" class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true" data-eb-editable="link" data-eb-key="index.button.21" data-eb-role="button" data-eb-kind="link">Todo</button>
-          <button type="button" class="filter-btn" data-filter="comida" role="tab" aria-selected="false" data-eb-editable="link" data-eb-key="index.button.22" data-eb-role="button" data-eb-kind="link">Comida rápida</button>
-          <button type="button" class="filter-btn" data-filter="ramen" role="tab" aria-selected="false" data-eb-editable="link" data-eb-key="index.button.23" data-eb-role="button" data-eb-kind="link">Ramen &amp; orientales</button>
-          <button type="button" class="filter-btn" data-filter="bebidas" role="tab" aria-selected="false" data-eb-editable="link" data-eb-key="index.button.24" data-eb-role="button" data-eb-kind="link">Bebidas</button>
+        <div class="menu-category" id="categoria-hamburguesas">
+          <h3 class="category-title" data-eb-editable="text" data-eb-key="index.h3.27" data-eb-role="h3" data-eb-kind="text">Hamburguesas</h3>
+          <div class="menu-grid">
+            <article class="dish-card" data-editor="block" data-editor-label="Hamburguesa Clásica" data-name="Hamburguesa Clásica" data-category="Hamburguesas">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=06ef6e11-755e-4e61-81db-c425e8a2a4d3" alt="Hamburguesa clásica de La Capilla" loading="lazy" data-eb-editable="image" data-eb-key="index.img.28" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.29" data-eb-role="h4" data-eb-kind="text">Hamburguesa Clásica</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Hamburguesa jugosa con los acompañamientos de siempre, lista para comer en el sitio o llevar.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Hamburguesa Clásica al carrito" data-eb-editable="link" data-eb-key="index.button.31" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Hamburguesa El Corral" data-name="Hamburguesa El Corral" data-category="Hamburguesas">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=d47e59e0-bf4d-4fee-adf1-659df73b8bb0" alt="Hamburguesa El Corral con carne a la parrilla" loading="lazy" data-eb-editable="image" data-eb-key="index.img.32" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.33" data-eb-role="h4" data-eb-kind="text">Hamburguesa El Corral</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.34" data-eb-role="p" data-eb-kind="text">La favorita de la casa: carne a la parrilla en pan suave, acompañada de papas al gusto.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Hamburguesa El Corral al carrito" data-eb-editable="link" data-eb-key="index.button.35" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Hamburguesa Empresarial" data-name="Hamburguesa Empresarial" data-category="Hamburguesas">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=768b9e56-b2ae-4349-8ae2-8052bdaebe3c" alt="Hamburguesa empresarial lista para servir" loading="lazy" data-eb-editable="image" data-eb-key="index.img.36" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.37" data-eb-role="h4" data-eb-kind="text">Hamburguesa Empresarial</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.38" data-eb-role="p" data-eb-kind="text">Una porción generosa para quienes llegan con hambre de verdad. Ideal para pedidos de oficina.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Hamburguesa Empresarial al carrito" data-eb-editable="link" data-eb-key="index.button.39" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Hamburguesa Especial" data-name="Hamburguesa Especial" data-category="Hamburguesas">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=d2c92fab-5776-40bd-a88c-a59ad1a90774" alt="Hamburguesa especial La Capilla" loading="lazy" data-eb-editable="image" data-eb-key="index.img.40" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.41" data-eb-role="h4" data-eb-kind="text">Hamburguesa Especial</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Nuestra receta especial con ingredientes frescos, para comer aquí o pedir a domicilio.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Hamburguesa Especial al carrito" data-eb-editable="link" data-eb-key="index.button.43" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
 
-        <div class="menu-grid" id="menuGrid" aria-live="polite"><!-- productos por JS --></div>
+        <div class="menu-category" id="categoria-ramen-dumplings">
+          <h3 class="category-title" data-eb-editable="text" data-eb-key="index.h3.44" data-eb-role="h3" data-eb-kind="text">Ramen y dumplings</h3>
+          <div class="menu-grid">
+            <article class="dish-card" data-editor="block" data-editor-label="Ramen" data-name="Ramen" data-category="Ramen y dumplings">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=d4fa7656-a1bd-4530-9f93-a86156cf93a4" alt="Ramen caliente servido en tazón" loading="lazy" data-eb-editable="image" data-eb-key="index.img.45" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.46" data-eb-role="h4" data-eb-kind="text">Ramen</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.47" data-eb-role="p" data-eb-kind="text">Caldo profundo, fideos al dente y toppings frescos. Un plato completo y reconfortante.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Ramen al carrito" data-eb-editable="link" data-eb-key="index.button.48" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Ramen Sorprendente" data-name="Ramen Sorprendente" data-category="Ramen y dumplings">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=5cd74183-efe2-4b7d-8821-36acb917a9cf" alt="Ramen sorprendente con fideos y caldo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.49" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.50" data-eb-role="h4" data-eb-kind="text">Ramen Sorprendente</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.51" data-eb-role="p" data-eb-kind="text">La versión más abundante de nuestra barra de ramen, ideal para compartir o devorar solo.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Ramen Sorprendente al carrito" data-eb-editable="link" data-eb-key="index.button.52" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Dumplings" data-name="Dumplings" data-category="Ramen y dumplings">
+              <div class="dish-media">
+                <img src="https://images.pexels.com/photos/38141840/pexels-photo-38141840.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dumplings al vapor servidos en vaporera de bambú" loading="lazy" data-eb-editable="image" data-eb-key="index.img.53" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.54" data-eb-role="h4" data-eb-kind="text">Dumplings</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.55" data-eb-role="p" data-eb-kind="text">Pequeñas joyas al vapor, perfectas para picar antes del plato fuerte o como tacos orientales.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Dumplings al carrito" data-eb-editable="link" data-eb-key="index.button.56" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="menu-category" id="categoria-bebidas">
+          <h3 class="category-title" data-eb-editable="text" data-eb-key="index.h3.57" data-eb-role="h3" data-eb-kind="text">Bebidas</h3>
+          <div class="menu-grid">
+            <article class="dish-card" data-editor="block" data-editor-label="Coca-Cola" data-name="Coca-Cola" data-category="Bebidas">
+              <div class="dish-media">
+                <img src="https://images.pexels.com/photos/4113632/pexels-photo-4113632.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Coca-Cola helada con hielo" loading="lazy" data-eb-editable="image" data-eb-key="index.img.58" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.59" data-eb-role="h4" data-eb-kind="text">Coca-Cola</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">La compañía perfecta para tu hamburguesa: bien fría, con hielo y listo.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Coca-Cola al carrito" data-eb-editable="link" data-eb-key="index.button.61" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Jugos naturales" data-name="Jugos naturales" data-category="Bebidas">
+              <div class="dish-media">
+                <img src="https://images.pexels.com/photos/8215113/pexels-photo-8215113.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Jugos naturales de frutas en vasos" loading="lazy" data-eb-editable="image" data-eb-key="index.img.62" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.63" data-eb-role="h4" data-eb-kind="text">Jugos naturales</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.64" data-eb-role="p" data-eb-kind="text">Jugos frescos de fruta de temporada, preparados al momento para acompañar tu comida.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Jugos naturales al carrito" data-eb-editable="link" data-eb-key="index.button.65" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+            <article class="dish-card" data-editor="block" data-editor-label="Cócteles flameantes" data-name="Cócteles flameantes" data-category="Bebidas">
+              <div class="dish-media">
+                <img src="https://itm-void-excepcional.pages.dev/api/itm-project-assets?file=e4d71e16-3a6b-48aa-92c0-0f3ed8f86aaa" alt="Cócteles flameantes servidos en la barra" loading="lazy" data-eb-editable="image" data-eb-key="index.img.66" data-eb-role="img" data-eb-kind="image">
+              </div>
+              <div class="dish-body">
+                <h4 data-eb-editable="text" data-eb-key="index.h4.67" data-eb-role="h4" data-eb-kind="text">Cócteles flameantes</h4>
+                <p data-eb-editable="text" data-eb-key="index.p.68" data-eb-role="p" data-eb-kind="text">Bebidas de autor para acompañar la sobremesa, servidas con estilo en nuestra barra.</p>
+                <div class="dish-foot">
+                  <span class="dish-price">Precio por WhatsApp</span>
+                  <button class="add-btn" data-add aria-label="Agregar Cócteles flameantes al carrito" data-eb-editable="link" data-eb-key="index.button.69" data-eb-role="button" data-eb-kind="link">Agregar</button>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- NOSOTROS -->
-    <section class="section section-alt" id="nosotros">
-      <div class="container">
-        <div class="about">
-          <div class="about-media">
-            <img src="images/el-motivo.jpg" alt="Interior cálido del restaurante La Capilla" loading="lazy" / data-eb-editable="image" data-eb-key="index.img.25" data-eb-role="img" data-eb-kind="image">
-            <img class="about-media-second" src="images/hamburguesas-empresas.jpg" alt="Hamburguesa empresarial de La Capilla" loading="lazy" / data-eb-editable="image" data-eb-key="index.img.26" data-eb-role="img" data-eb-kind="image">
-          </div>
-          <div class="about-copy">
-            <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Sobre nosotros</p>
-            <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.28" data-eb-role="h2" data-eb-kind="text">Un rincón rústico para el buen comer</h2>
-            <p data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">En <strong>La Capilla</strong> unimos lo mejor de dos mundos: la comida rápida de siempre y la cocina oriental, con un ambiente cálido y natural pensado para sentirse como en casa.</p>
-            <p data-eb-editable="text" data-eb-key="index.p.30" data-eb-role="p" data-eb-kind="text">Comida para llevar, para comer en el sitio o a domicilio. Todo se prepara al momento, con productos frescos y esa preparación esquisita que se nota en cada bocado.</p>
-            <ul class="about-list">
-              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Hamburguesas jugosas y al momento</li>
-              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Ramen y dumplings con caldo propio</li>
-              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Bebidas y cócteles para todos los gustos</li>
-              <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span> Pedidos por WhatsApp, fáciles y rápidos</li>
-            </ul>
-            <a class="btn btn-primary" href="#menu" data-eb-editable="link" data-eb-key="index.a.31" data-eb-role="a" data-eb-kind="link">Ordenar ahora</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CÓMO PEDIR -->
-    <section class="section" id="como-pedir">
+    <section class="how-order" id="como-pedir" data-editor="section" data-editor-label="Cómo pedir">
       <div class="container">
         <div class="section-head">
-          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.32" data-eb-role="p" data-eb-kind="text">Así de fácil</p>
-          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.33" data-eb-role="h2" data-eb-kind="text">Cómo pedir</h2>
+          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">Cómo pedir</p>
+          <h2 data-eb-editable="text" data-eb-key="index.h2.71" data-eb-role="h2" data-eb-kind="text">Tu pedido en tres pasos</h2>
         </div>
-        <div class="steps">
-          <article class="step">
-            <span class="step-number">1</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.34" data-eb-role="h3" data-eb-kind="text">Arma tu carrito</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Explora el menú y agrega lo que quieras</p>
-          </article>
-          <article class="step">
-            <span class="step-number">2</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.36" data-eb-role="h3" data-eb-kind="text">Revisa y confirma</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Elige cantidades, personas y nota de tu pedido</p>
-          </article>
-          <article class="step">
-            <span class="step-number">3</span>
-            <h3 data-eb-editable="text" data-eb-key="index.h3.38" data-eb-role="h3" data-eb-kind="text">Ordénalo por WhatsApp</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.39" data-eb-role="p" data-eb-kind="text">Te llevamos directo al chat para cerrar tu pedido y coordinar la entrega</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- UBICACIÓN -->
-    <section class="section section-map" id="ubicacion">
-      <div class="container">
-        <div class="section-head">
-          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.40" data-eb-role="p" data-eb-kind="text">Encuéntranos</p>
-          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.41" data-eb-role="h2" data-eb-kind="text">Ubicación</h2>
-        </div>
-        <div class="map-wrap">
-          <div class="map-card">
-            <h3 data-eb-editable="text" data-eb-key="index.h3.42" data-eb-role="h3" data-eb-kind="text">La Capilla · Monterrey</h3>
-            <p data-eb-editable="text" data-eb-key="index.p.43" data-eb-role="p" data-eb-kind="text">Lunes a sábado de 10:00 a 20:00</p>
-            <p data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text"><a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.45" data-eb-role="a" data-eb-kind="link">342 343 2324</a></p>
-            <div class="map-social">
-              <a href="https://facebook.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.46" data-eb-role="a" data-eb-kind="link">Facebook</a>
-              <a href="https://instagram.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.47" data-eb-role="a" data-eb-kind="link">Instagram</a>
-            </div>
-            <a class="btn btn-whatsapp" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20tengo%20una%20duda" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.48" data-eb-role="a" data-eb-kind="link">
-              Escríbenos por WhatsApp
-            </a>
-          </div>
-          <div class="map-frame">
-            <iframe title="Mapa de ubicación de La Capilla en Monterrey" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60080.29249353073!2d-89.95960567229005!3d19.754377909211858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f57e530bd60abf9%3A0xc1f5251d7481d%26output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
-          </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num">1</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.72" data-eb-role="h3" data-eb-kind="text">Elige tu platillo</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.73" data-eb-role="p" data-eb-kind="text">Explora el menú y agrega al carrito todo lo que se te antoje.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">2</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.74" data-eb-role="h3" data-eb-kind="text">Termina por WhatsApp</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.75" data-eb-role="p" data-eb-kind="text">Pulsa el botón de pedido y se abrirá WhatsApp con tu carrito listo.</p>
+          </li>
+          <li class="step">
+            <span class="step-num">3</span>
+            <h3 data-eb-editable="text" data-eb-key="index.h3.76" data-eb-role="h3" data-eb-kind="text">Come o recibe en casa</h3>
+            <p data-eb-editable="text" data-eb-key="index.p.77" data-eb-role="p" data-eb-kind="text">Lo recoges en el sitio o te lo mandamos a domicilio en Monterrey.</p>
+          </li>
+        </ol>
+        <div class="order-banner">
+          <p data-eb-editable="text" data-eb-key="index.p.78" data-eb-role="p" data-eb-kind="text"><strong>Horario:</strong> Lunes a sábado de 10:00 a 20:00 · Monterrey</p>
+          <a class="btn btn-primary" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido." target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.79" data-eb-role="a" data-eb-kind="link">Iniciar pedido por WhatsApp</a>
         </div>
       </div>
     </section>
 
-    <!-- OPINIONES -->
-    <section class="section section-alt" id="opiniones">
+    <section class="comments" id="resenas" data-editor="section" data-editor-label="Reseñas y comentarios" data-itm-profile data-itm-comments data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635">
       <div class="container">
         <div class="section-head">
-          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.49" data-eb-role="p" data-eb-kind="text">Lo que dicen de nosotros</p>
-          <h2 class="section-title" data-eb-editable="text" data-eb-key="index.h2.50" data-eb-role="h2" data-eb-kind="text">Opiniones</h2>
+          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.80" data-eb-role="p" data-eb-kind="text">Reseñas y comentarios</p>
+          <h2 data-eb-editable="text" data-eb-key="index.h2.81" data-eb-role="h2" data-eb-kind="text">Lo que dicen nuestros visitantes</h2>
+          <p data-eb-editable="text" data-eb-key="index.p.82" data-eb-role="p" data-eb-kind="text">Tu opinión nos ayuda a seguir mejorando. Cuéntanos cómo estuvo tu experiencia en La Capilla.</p>
         </div>
-        <div data-itm-comments data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
+        <div class="comments-guide">
+          <h3 data-eb-editable="text" data-eb-key="index.h3.83" data-eb-role="h3" data-eb-kind="text">Cómo participar</h3>
+          <ul>
+            <li>Inicia sesión con tu cuenta de Google.</li>
+            <li>Guarda tu nombre y, si lo deseas, un teléfono opcional que solo verás tú (es privado).</li>
+            <li>Califica con estrellas tu visita.</li>
+            <li>Publica tu comentario, y podrás editarlo o eliminarlo cuando quieras.</li>
+          </ul>
+          <p class="comments-privacy" data-eb-editable="text" data-eb-key="index.p.84" data-eb-role="p" data-eb-kind="text">Solo tu nombre se muestra públicamente. Tu teléfono nunca aparece en el sitio.</p>
+        </div>
+        <div class="comments-widget" data-itm-widget></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contacto" data-editor="section" data-editor-label="Contacto">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="section-eyebrow" data-eb-editable="text" data-eb-key="index.p.85" data-eb-role="p" data-eb-kind="text">Contacto</p>
+          <h2 data-eb-editable="text" data-eb-key="index.h2.86" data-eb-role="h2" data-eb-kind="text">Visítanos o escríbenos</h2>
+          <ul class="contact-list">
+            <li>
+              <span class="contact-label">Teléfono / WhatsApp</span>
+              <a href="https://wa.me/523423432324" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.87" data-eb-role="a" data-eb-kind="link">342 343 2324</a>
+            </li>
+            <li>
+              <span class="contact-label">Horario</span>
+              <span>Lunes a sábado de 10:00 a 20:00</span>
+            </li>
+            <li>
+              <span class="contact-label">Ciudad</span>
+              <span>Monterrey</span>
+            </li>
+            <li>
+              <span class="contact-label">Redes</span>
+              <span class="social-links">
+                <a href="https://facebook.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.88" data-eb-role="a" data-eb-kind="link">Facebook</a>
+                <a href="https://instagram.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.89" data-eb-role="a" data-eb-kind="link">Instagram</a>
+              </span>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="https://wa.me/523423432324" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.90" data-eb-role="a" data-eb-kind="link">Pedir por WhatsApp</a>
+        </div>
+        <div class="contact-map">
+          <iframe
+            title="Ubicación de La Capilla, Monterrey"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60080.29249353073!2d-89.95960567229005!3d19.754377909211858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f57e530bd60abf9%3A0xc1f5251d7481d"
+            width="100%"
+            height="420"
+            style="border:0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
       </div>
     </section>
   </main>
@@ -218,75 +332,39 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="brand-mark" aria-hidden="true">L</span>
-        <div>
-          <p class="footer-name" data-eb-editable="text" data-eb-key="index.p.51" data-eb-role="p" data-eb-kind="text">La Capilla</p>
-          <p data-eb-editable="text" data-eb-key="index.p.52" data-eb-role="p" data-eb-kind="text">Comida, ramen y bebidas en Monterrey. Para llevar, en el sitio o a domicilio.</p>
-        </div>
+        <p class="footer-name" data-eb-editable="text" data-eb-key="index.p.91" data-eb-role="p" data-eb-kind="text">La Capilla</p>
+        <p data-eb-editable="text" data-eb-key="index.p.92" data-eb-role="p" data-eb-kind="text">Comida rápida y bebidas en Monterrey. Para comer en el sitio, para llevar o a domicilio.</p>
       </div>
-      <nav class="footer-nav" aria-label="Navegación del pie de página">
-        <a href="#inicio" data-eb-editable="link" data-eb-key="index.a.53" data-eb-role="a" data-eb-kind="link">Inicio</a>
-        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.54" data-eb-role="a" data-eb-kind="link">Menú</a>
-        <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.55" data-eb-role="a" data-eb-kind="link">Nosotros</a>
-        <a href="#ubicacion" data-eb-editable="link" data-eb-key="index.a.56" data-eb-role="a" data-eb-kind="link">Ubicación</a>
-        <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.57" data-eb-role="a" data-eb-kind="link">Opiniones</a>
+      <nav class="footer-nav" aria-label="Enlaces del pie de página">
+        <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.93" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.94" data-eb-role="a" data-eb-kind="link">Menú</a>
+        <a href="#como-pedir" data-eb-editable="link" data-eb-key="index.a.95" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
+        <a href="#resenas" data-eb-editable="link" data-eb-key="index.a.96" data-eb-role="a" data-eb-kind="link">Reseñas</a>
+        <a href="#contacto" data-eb-editable="link" data-eb-key="index.a.97" data-eb-role="a" data-eb-kind="link">Contacto</a>
       </nav>
-      <div class="footer-contact">
-        <a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.58" data-eb-role="a" data-eb-kind="link">342 343 2324</a>
-        <span>Lun–Sáb 10:00–20:00</span>
+      <div class="footer-credits">
+        <p data-eb-editable="text" data-eb-key="index.p.98" data-eb-role="p" data-eb-kind="text">Fotos de acompañamiento cortesía de Pexels.</p>
+        <p class="copyright" data-eb-editable="text" data-eb-key="index.p.99" data-eb-role="p" data-eb-kind="text">La Capilla · Sitio gratuito con hosting incluido.</p>
       </div>
     </div>
-    <p class="footer-legal" data-eb-editable="text" data-eb-key="index.p.59" data-eb-role="p" data-eb-kind="text">© <span id="year">2026</span> La Capilla · Sitio local</p>
   </footer>
 
-  <!-- CARRITO -->
-  <div class="cart-overlay" id="cartOverlay" hidden></div>
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Carrito de compras">
+  <div class="cart-backdrop" id="cartBackdrop" aria-hidden="true"></div>
+  <aside class="cart-panel" id="cartPanel" aria-hidden="true" aria-label="Carrito de pedido">
     <div class="cart-head">
-      <h2 data-eb-editable="text" data-eb-key="index.h2.60" data-eb-role="h2" data-eb-kind="text">Tu pedido <span class="cart-head-count" id="cartHeadCount">(0)</span></h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar carrito" data-eb-editable="link" data-eb-key="index.button.61" data-eb-role="button" data-eb-kind="link">&times;</button>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.100" data-eb-role="h2" data-eb-kind="text">Tu pedido</h2>
+      <button class="cart-close" id="cartClose" aria-label="Cerrar carrito" data-eb-editable="link" data-eb-key="index.button.101" data-eb-role="button" data-eb-kind="link">Cerrar</button>
     </div>
-
-    <div class="cart-body">
-      <div class="cart-notes" id="cartNotes">
-        <p class="cart-tip" data-eb-editable="text" data-eb-key="index.p.62" data-eb-role="p" data-eb-kind="text">Suma productos de la lista y envía tu pedido por WhatsApp.</p>
-      </div>
-      <ul class="cart-list" id="cartList"></ul>
-
-      <form class="cart-fields" id="orderFields" autocomplete="off">
-        <label>Tu nombre
-          <input type="text" id="fieldName" name="name" placeholder="¿Con quién hablamos?" autocomplete="name" />
-        </label>
-        <label>Detalles de entrega
-          <input type="text" id="fieldNote" name="note" placeholder="¿Para llevar, en el sitio o a domicilio? Dirección, hora…" />
-        </label>
-      </form>
-    </div>
-
+    <p class="cart-hint" data-eb-editable="text" data-eb-key="index.p.102" data-eb-role="p" data-eb-kind="text">Suma tus productos, pulsa el botón y confirma todo por WhatsApp.</p>
+    <ul class="cart-list" id="cartList"></ul>
+    <p class="cart-empty" id="cartEmpty" data-eb-editable="text" data-eb-key="index.p.103" data-eb-role="p" data-eb-kind="text">Tu carrito está vacío. Elige algo del menú para empezar.</p>
     <div class="cart-foot">
-      <div class="cart-total">
-        <span>Total estimado</span>
-        <strong id="cartTotal">$0</strong>
-      </div>
-      <p class="cart-helper" data-eb-editable="text" data-eb-key="index.p.63" data-eb-role="p" data-eb-kind="text">El total es de referencia; al enviar tu pedido te lo confirmamos.</p>
-      <button class="btn btn-whatsapp btn-block" id="orderBtn" type="button" disabled data-eb-editable="link" data-eb-key="index.button.64" data-eb-role="button" data-eb-kind="link">
-        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.4 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.06-.26-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
-        Enviar pedido por WhatsApp
-      </button>
-      <button class="btn btn-ghost btn-block" id="clearCartBtn" type="button" data-eb-editable="link" data-eb-key="index.button.65" data-eb-role="button" data-eb-kind="link">Vaciar carrito</button>
+      <button class="btn btn-primary btn-block" id="cartOrder" disabled data-eb-editable="link" data-eb-key="index.button.104" data-eb-role="button" data-eb-kind="link">Hacer pedido por WhatsApp</button>
+      <p class="cart-note" data-eb-editable="text" data-eb-key="index.p.105" data-eb-role="p" data-eb-kind="text">Los precios y combos se confirman en WhatsApp antes de preparar tu pedido.</p>
     </div>
   </aside>
 
-  <!-- BOTÓN FLOTANTE WHATSAPP -->
-  <a class="fab-whatsapp" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" data-eb-editable="link" data-eb-key="index.a.66" data-eb-role="a" data-eb-kind="link">
-    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.26.86 5.82 2.42a8.2 8.2 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.24-8.23M8.53 7.33c-.16 0-.43.06-.66.31-.22.25-.87.86-.87 2.07 0 1.22.89 2.4 1 2.56.14.17 1.76 2.67 4.25 3.73.59.27 1.05.42 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.15-1.18-.07-.1-.23-.16-.48-.27-.25-.14-1.47-.74-1.69-.82-.23-.08-.37-.12-.56.12-.16.25-.64.81-.78.97-.15.17-.29.19-.53.06-.26-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.12-.24-.01-.39.11-.5.11-.11.27-.29.37-.44.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.11-.56-1.35-.77-1.84-.2-.48-.4-.42-.56-.43-.14 0-.3-.01-.47-.01z"/></svg>
-  </a>
-
-  <script src="app.js" defer></script>
-  <script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
-
-<section id="perfil-usuario" aria-label="Perfil del visitante">
-  <div data-itm-profile data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
-</section>
+  <script src="script.js"></script>
+  <script src="https://itm-void-excepcional.pages.dev/comments.js"></script>
 </body>
 </html>
