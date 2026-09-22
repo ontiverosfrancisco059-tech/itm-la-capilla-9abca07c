@@ -1,93 +1,86 @@
+const PRODUCTS = {
+  hamburguesa: { name: "Hamburguesa artesanal", price: 129 },
+  ramen: { name: "Ramen caliente", price: 139 },
+  dumplings: { name: "Dumplings dorados · 8 pzas", price: 99 },
+  jugos: { name: "Jugos naturales 500ml", price: 45 },
+  cola: { name: "Coca-Cola bien fría", price: 35 },
+  postre: { name: "Flan casero de la capilla", price: 55 }
+};
 const WA_NUMBER = "523423432324";
-const cart = new Map(); // id -> {name, price, qty}
+const KEY = "lacapilla_cart_v1";
 
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-const money = n => "$" + n.toFixed(0);
+const $ = (s) => document.querySelector(s);
+const drawer = $("#cartDrawer"), overlay = $("#cartOverlay");
 
-function updateCartUI(){
-  const items = $("#cartItems");
-  const count = [...cart.values()].reduce((a,i)=>a+i.qty,0);
-  const total = [...cart.values()].reduce((a,i)=>a+i.qty*i.price,0);
-  $("#cartCount").textContent = count;
-  $("#cartTotal").textContent = money(total);
-  items.innerHTML = "";
-  if(cart.size===0){
-    items.innerHTML = "<li><div><strong>Carrito vacío</strong><br><span class='muted small'>Agrega hamburguesas, ramen, dumplings, bebidas o postres.</span></div></li>";
-    return;
-  }
-  for(const [id,it] of cart){
-    const li = document.createElement("li");
-    li.innerHTML = `<div><strong></strong><br><span class="muted small"></span></div>
-      <div class="qty"><button data-act="dec" aria-label="Quitar uno">−</button><span></span><button data-act="inc" aria-label="Agregar uno">+</button></div>`;
-    li.querySelector("strong").textContent = it.name;
-    li.querySelector(".muted").textContent = money(it.price) + " c/u · " + money(it.price*it.qty);
-    li.querySelector(".qty span").textContent = it.qty;
-    li.querySelector('[data-act="inc"]').onclick = ()=>{ it.qty++; updateCartUI(); };
-    li.querySelector('[data-act="dec"]').onclick = ()=>{ it.qty--; if(it.qty<=0) cart.delete(id); updateCartUI(); };
-    items.appendChild(li);
-  }
+function loadCart(){ try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch { return {}; } }
+function saveCart(c){ localStorage.setItem(KEY, JSON.stringify(c)); }
+let cart = loadCart();
+
+function money(n){ return "$" + n.toLocaleString("es-MX"); }
+function count(){ return Object.values(cart).reduce((a,b)=>a+b,0); }
+function total(){ return Object.entries(cart).reduce((a,[id,q])=>a+(PRODUCTS[id]?.price||0)*q,0); }
+
+function toast(msg){
+  const t = $("#toast"); t.textContent = msg; t.classList.add("show");
+  clearTimeout(t._h); t._h = setTimeout(()=>t.classList.remove("show"), 2200);
 }
 
-function openCart(){ $("#cartDrawer").hidden=false; $("#cartBackdrop").hidden=false; }
-function closeCart(){ $("#cartDrawer").hidden=true; $("#cartBackdrop").hidden=true; }
+function render(){
+  $("#cartCount").textContent = count();
+  $("#cartTotal").textContent = money(total());
+  const box = $("#cartItems");
+  const ids = Object.keys(cart).filter(id=>cart[id]>0);
+  if(!ids.length){ box.innerHTML = '<p class="empty">Tu carrito está vacío.<br>Agrega algo rico del menú.</p>'; return; }
+  box.innerHTML = ids.map(id=>{
+    const p = PRODUCTS[id]; const q = cart[id];
+    return `<div class="cart-item"><div><strong>${p.name}</strong><br><span>${money(p.price)} c/u · ${money(p.price*q)}</span></div>
+    <div class="qty"><button data-dec="${id}" aria-label="Quitar uno">−</button><span>${q}</span><button data-inc="${id}" aria-label="Agregar uno">+</button></div></div>`;
+  }).join("");
+}
 
-document.addEventListener("DOMContentLoaded", ()=>{
-  updateCartUI();
-  $$("#productGrid .add").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
-      const card = btn.closest(".card");
-      const id = card.dataset.id, name = card.dataset.name, price = Number(card.dataset.price);
-      const cur = cart.get(id) || {name, price, qty:0};
-      cur.qty++; cart.set(id, cur);
-      updateCartUI(); openCart();
+function openCart(){ render(); drawer.classList.add("open"); drawer.setAttribute("aria-hidden","false"); overlay.hidden = false; }
+function closeCart(){ drawer.classList.remove("open"); drawer.setAttribute("aria-hidden","true"); overlay.hidden = true; }
+
+document.addEventListener("click", (e)=>{
+  const add = e.target.closest("[data-add]");
+  if(add){ const id = add.dataset.add; cart[id]=(cart[id]||0)+1; saveCart(cart); render(); toast(PRODUCTS[id].name+" agregado"); return; }
+  const inc = e.target.closest("[data-inc]");
+  if(inc){ cart[inc.dataset.inc]++; saveCart(cart); render(); return; }
+  const dec = e.target.closest("[data-dec]");
+  if(dec){ const id=dec.dataset.dec; cart[id]--; if(cart[id]<=0) delete cart[id]; saveCart(cart); render(); return; }
+});
+
+$("#openCart").addEventListener("click", openCart);
+$("#openCart2").addEventListener("click", openCart);
+$("#closeCart").addEventListener("click", closeCart);
+overlay.addEventListener("click", closeCart);
+document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeCart(); });
+
+$("#clearCart").addEventListener("click", ()=>{ cart={}; saveCart(cart); render(); });
+
+$("#checkoutBtn").addEventListener("click", ()=>{
+  const ids = Object.keys(cart);
+  if(!ids.length){ toast("Agrega al menos un platillo"); return; }
+  const modo = (document.querySelector('input[name="modo"]:checked')||{}).value || "Para llevar";
+  const lines = ids.map(id=>`• ${cart[id]}x ${PRODUCTS[id].name} — ${money(PRODUCTS[id].price*cart[id])}`);
+  const msg = `Hola La Capilla, quiero hacer un pedido:\n\n${lines.join("\n")}\n\nTotal: ${money(total())}\nModalidad: ${modo}\nNombre: \nDirección (si es domicilio): `;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`,"_blank");
+});
+
+// filtros menú
+document.querySelectorAll(".chip").forEach(ch=>{
+  ch.addEventListener("click", ()=>{
+    document.querySelectorAll(".chip").forEach(c=>c.classList.remove("active"));
+    ch.classList.add("active");
+    const f = ch.dataset.filter;
+    document.querySelectorAll("#menuGrid .card").forEach(card=>{
+      card.style.display = (f==="todo" || card.dataset.cat===f) ? "" : "none";
     });
   });
-  $("#openCart").onclick = openCart;
-  const on2 = $("#orderNow"); if(on2) on2.onclick = openCart;
-  $("#closeCart").onclick = closeCart;
-  $("#cartBackdrop").onclick = closeCart;
-  document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeCart(); });
-  $("#clearCart").onclick = ()=>{ cart.clear(); updateCartUI(); };
-
-  $("#checkoutWa").onclick = ()=>{
-    if(cart.size===0){ alert("Tu carrito está vacío. Agrega algo del menú primero."); return; }
-    const name = ($("#buyerName").value||"").trim();
-    const type = $("#deliveryType").value;
-    const lines = [...cart.values()].map(i=>`• ${i.qty}× ${i.name} — ${money(i.price*i.qty)}`);
-    const total = [...cart.values()].reduce((a,i)=>a+i.qty*i.price,0);
-    const msg = `Hola La Capilla, quiero hacer un pedido:%0A${encodeURIComponent(lines.join("\n"))}%0ATotal estimado: ${money(total)}%0ATipo: ${encodeURIComponent(type)}${name?`%0ANombre: ${encodeURIComponent(name)}`:""}%0AGracias.`;
-    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`,"_blank","noopener");
-  };
-
-  // filtros
-  $$(".chip").forEach(ch=>{
-    ch.onclick = ()=>{
-      $$(".chip").forEach(c=>c.classList.remove("active"));
-      ch.classList.add("active");
-      const f = ch.dataset.filter;
-      $$("#productGrid .card").forEach(card=>{
-        const cats = (card.dataset.cat||"").split(" ");
-        card.style.display = (f==="all"||cats.includes(f)) ? "" : "none";
-      });
-    };
-  });
-
-  // nav móvil
-  const t = $("#menuToggle"), m = $("#mobileNav");
-  t.onclick = ()=>{ const o = m.classList.toggle("open"); t.setAttribute("aria-expanded", o); };
-  $$("#mobileNav a").forEach(a=>a.onclick=()=>m.classList.remove("open"));
-
-  // formulario rápido -> WhatsApp
-  $("#quickForm").addEventListener("submit", e=>{
-    e.preventDefault();
-    const fd = new FormData(e.target);
-    const txt = `Hola La Capilla, soy ${fd.get("nombre")} (${fd.get("tipo")}). Mi antojo: ${fd.get("notas")||"ver menú"}. ¿Me confirmas tiempo y total?`;
-    $("#quickMsg").textContent = "Abriendo WhatsApp con tu mensaje…";
-    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(txt)}`,"_blank","noopener");
-  });
-
-  // sombra topbar
-  const bar = $("#topbar");
-  addEventListener("scroll", ()=>{ bar.style.boxShadow = scrollY>8 ? "0 6px 24px rgba(60,32,12,.12)" : "none"; }, {passive:true});
 });
+
+// nav móvil
+$("#menuToggle").addEventListener("click", ()=> $("#nav").classList.toggle("open"));
+document.querySelectorAll("#nav a").forEach(a=>a.addEventListener("click", ()=> $("#nav").classList.remove("open")));
+
+render();
