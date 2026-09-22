@@ -1,15 +1,19 @@
 // Mobile menu toggle
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     const navToggle = document.querySelector('.nav-toggle');
-    const navUl = document.querySelector('.nav ul');
+    const navMenu = document.querySelector('.nav');
 
-    if (navToggle && navUl) {
-        navToggle.addEventListener('click', () => {
-            navUl.classList.toggle('open');
-            // Change icon (optional)
-            navToggle.textContent = navUl.classList.contains('open') ? '✕' : '☰';
+    navToggle.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+    });
+
+    // Close mobile menu when clicking a link
+    const navLinks = document.querySelectorAll('.nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
         });
-    }
+    });
 
     // Set current year in footer
     const yearEl = document.getElementById('year');
