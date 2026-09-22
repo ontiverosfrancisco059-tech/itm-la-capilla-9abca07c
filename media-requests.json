@@ -1,1 +1,136 @@
-[]
+{
+  "media_requests": [
+    {
+      "slot_id": "slot1",
+      "page": "home",
+      "section": "hero",
+      "category": "place",
+      "label": "Hero banner showing restaurant exterior",
+      "theme": "rustic warm",
+      "query": "rustic restaurant exterior Monterrey Mexico",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot2",
+      "page": "home",
+      "section": "featured_dishes",
+      "category": "dish",
+      "label": "Featured hamburger",
+      "theme": "appetizing",
+      "query": "gourmet hamburger with fries",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot3",
+      "page": "home",
+      "section": "featured_dishes",
+      "category": "dish",
+      "label": "Featured ramen",
+      "theme": "appetizing",
+      "query": "steaming ramen bowl",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot4",
+      "page": "home",
+      "section": "featured_dishes",
+      "category": "dish",
+      "label": "Featured juices",
+      "theme": "fresh",
+      "query": "fresh fruit juices assortment",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot5",
+      "page": "home",
+      "section": "gallery",
+      "category": "gallery",
+      "label": "Ambiance gallery",
+      "theme": "cozy interior",
+      "query": "cozy rustic restaurant interior",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot6",
+      "page": "menu",
+      "section": "menu_items",
+      "category": "product",
+      "label": "Menu item hamburger",
+      "theme": "delicious",
+      "query": "hamburger closeup",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot7",
+      "page": "menu",
+      "section": "menu_items",
+      "category": "product",
+      "label": "Menu item ramen",
+      "theme": "delicious",
+      "query": "ramen bowl closeup",
+      "priority": "high",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot8",
+      "page": "about",
+      "section": "interior",
+      "category": "place",
+      "label": "Restaurant interior",
+      "theme": "rustic ambiance",
+      "query": "rustic restaurant dining area",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot9",
+      "page": "contact",
+      "section": "facade",
+      "category": "place",
+      "label": "Restaurant facade",
+      "theme": "welcoming entrance",
+      "query": "restaurant facade Monterrey",
+      "priority": "medium",
+      "source": "search",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot10",
+      "page": "home",
+      "section": "background",
+      "category": "custom",
+      "label": "Subtle background texture",
+      "theme": "neutral",
+      "query": "generic background",
+      "priority": "low",
+      "source": "generic",
+      "fallback": "GR-AI"
+    },
+    {
+      "slot_id": "slot11",
+      "page": "footer",
+      "section": "decoration",
+      "category": "custom",
+      "label": "Decorative icon",
+      "theme": "simple",
+      "query": "generic icon",
+      "priority": "low",
+      "source": "generic",
+      "fallback": "GR-AI"
+    }
+  ]
+}
