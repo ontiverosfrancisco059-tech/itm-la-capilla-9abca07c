@@ -1,145 +1,283 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La Capilla - Restaurante</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Capilla · Cocina rústica en Monterrey — Hamburguesas, Ramen, Dumplings</title>
+<meta name="description" content="La Capilla en Monterrey: hamburguesas, ramen, dumplings, jugos naturales, refrescos y postres. Para comer en el sitio, para llevar o a domicilio. Pide por WhatsApp. Lunes a sábado de 10:00 a 20:00.">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700;9..144,900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%232b1a10'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23f2b950' font-family='Georgia'>LC</text></svg>">
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="logo" data-eb-editable="text" data-eb-key="index.h1.1" data-eb-role="h1" data-eb-kind="text">La Capilla</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#hero" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">Inicio</a></li>
-                    <li><a href="#menu" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Menú</a></li>
-                    <li><a href="#about" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Nosotros</a></li>
-                    <li><a href="#contact" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Contacto</a></li>
-                    <li><a href="#comments" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Opiniones</a></li>
-                </ul>
-            </nav>
-            <button class="nav-toggle" aria-label="Abrir menú" data-eb-editable="link" data-eb-key="index.button.7" data-eb-role="button" data-eb-kind="link">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </header>
+<a class="skip" href="#menu" data-eb-editable="link" data-eb-key="index.a.1" data-eb-role="a" data-eb-kind="link">Ir al menú</a>
 
-    <section id="hero" class="hero">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.8" data-eb-role="h2" data-eb-kind="text">Bienvenidos a La Capilla</h2>
-            <p data-eb-editable="text" data-eb-key="index.p.9" data-eb-role="p" data-eb-kind="text">Comida para llevar o para comer en el sitio, con estilo rústico y cálido.</p>
-            <img src="https://images.pexels.com/photos/19676137/pexels-photo-19676137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                 alt="Hero banner showing restaurant exterior" class="hero-image" data-eb-editable="image" data-eb-key="index.img.10" data-eb-role="img" data-eb-kind="image">
-        </div>
-    </section>
+<header class="topbar" id="inicio">
+  <div class="wrap topbar-in">
+    <a class="brand" href="#inicio" aria-label="La Capilla inicio" data-eb-editable="link" data-eb-key="index.a.2" data-eb-role="a" data-eb-kind="link">
+      <span class="brand-mark" aria-hidden="true">LC</span>
+      <span class="brand-txt"><strong>La Capilla</strong><small>Cocina rústica · Monterrey</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="#nosotros" data-eb-editable="link" data-eb-key="index.a.3" data-eb-role="a" data-eb-kind="link">Nosotros</a>
+      <a href="#menu" data-eb-editable="link" data-eb-key="index.a.4" data-eb-role="a" data-eb-kind="link">Menú</a>
+      <a href="#como-pedir" data-eb-editable="link" data-eb-key="index.a.5" data-eb-role="a" data-eb-kind="link">Cómo pedir</a>
+      <a href="#galeria" data-eb-editable="link" data-eb-key="index.a.6" data-eb-role="a" data-eb-kind="link">Galería</a>
+      <a href="#visitanos" data-eb-editable="link" data-eb-key="index.a.7" data-eb-role="a" data-eb-kind="link">Visítanos</a>
+      <a href="#opiniones" data-eb-editable="link" data-eb-key="index.a.8" data-eb-role="a" data-eb-kind="link">Opiniones</a>
+    </nav>
+    <div class="top-actions">
+      <a class="btn btn-wa btn-sm" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.9" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+      <button class="cart-btn" id="openCart" aria-label="Abrir carrito" data-eb-editable="link" data-eb-key="index.button.10" data-eb-role="button" data-eb-kind="link">Carrito <span class="cart-count" id="cartCount">0</span></button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" data-eb-editable="link" data-eb-key="index.button.11" data-eb-role="button" data-eb-kind="link">☰</button>
+    </div>
+  </div>
+</header>
 
-    <section id="featured" class="featured">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.11" data-eb-role="h2" data-eb-kind="text">Platos Destacados</h2>
-            <div class="cards">
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/30500761/pexels-photo-30500761.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                         alt="Featured hamburger" class="card-image" data-eb-editable="image" data-eb-key="index.img.12" data-eb-role="img" data-eb-kind="image">
-                    <h3 data-eb-editable="text" data-eb-key="index.h3.13" data-eb-role="h3" data-eb-kind="text">Hamburguesa Gourmet</h3>
-                    <p data-eb-editable="text" data-eb-key="index.p.14" data-eb-role="p" data-eb-kind="text">Deliciosa hamburguesa con papas crujientes.</p>
-                </article>
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/16671603/pexels-photo-16671603.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                         alt="Featured ramen" class="card-image" data-eb-editable="image" data-eb-key="index.img.15" data-eb-role="img" data-eb-kind="image">
-                    <h3 data-eb-editable="text" data-eb-key="index.h3.16" data-eb-role="h3" data-eb-kind="text">Ramen al Vapor</h3>
-                    <p data-eb-editable="text" data-eb-key="index.p.17" data-eb-role="p" data-eb-kind="text">Tazón de ramen auténtico con huevo y palillos.</p>
-                </article>
-                <article class="card">
-                    <img src="https://images.pexels.com/photos/8215110/pexels-photo-8215110.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                         alt="Featured juices" class="card-image" data-eb-editable="image" data-eb-key="index.img.18" data-eb-role="img" data-eb-kind="image">
-                    <h3 data-eb-editable="text" data-eb-key="index.h3.19" data-eb-role="h3" data-eb-kind="text">Jugos Naturales</h3>
-                    <p data-eb-editable="text" data-eb-key="index.p.20" data-eb-role="p" data-eb-kind="text">Variedad de jugos de frutas frescas.</p>
-                </article>
-            </div>
-        </div>
-    </section>
+<main>
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="kicker" data-eb-editable="text" data-eb-key="index.p.12" data-eb-role="p" data-eb-kind="text"><span class="dot"></span> Monterrey · Comer aquí · Para llevar · A domicilio</p>
+      <h1 data-eb-editable="text" data-eb-key="index.h1.13" data-eb-role="h1" data-eb-kind="text">Sabor <em>rústico</em> que se siente como casa.</h1>
+      <p class="lead" data-eb-editable="text" data-eb-key="index.p.14" data-eb-role="p" data-eb-kind="text">Hamburguesas jugosas, ramen caliente, dumplings, jugos naturales y postre de la casa. Todo en un local cálido de madera, ideal para celular y para pedir rápido por WhatsApp.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#menu" data-eb-editable="link" data-eb-key="index.a.15" data-eb-role="a" data-eb-kind="link">Ver menú y pedir</a>
+        <a class="btn btn-ghost" href="#visitanos" data-eb-editable="link" data-eb-key="index.a.16" data-eb-role="a" data-eb-kind="link">Cómo llegar</a>
+      </div>
+      <ul class="hero-meta">
+        <li><strong>Lun–Sáb</strong><span>10:00 a 20:00</span></li>
+        <li><strong>Tel</strong><span><a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.17" data-eb-role="a" data-eb-kind="link">342 343 2324</a></span></li>
+        <li><strong>Pedido</strong><span>Carrito → WhatsApp</span></li>
+      </ul>
+    </div>
+    <div class="hero-media">
+      <figure class="hero-frame">
+        <img src="https://images.pexels.com/photos/36750270/pexels-photo-36750270.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Hamburguesas jugosas con papas en tabla rústica de madera — Hero principal rústico cálido" loading="eager" fetchpriority="high" data-eb-editable="image" data-eb-key="index.img.18" data-eb-role="img" data-eb-kind="image">
+        <figcaption>Hamburguesas de la casa · Foto: Mohamed Olwy / Pexels</figcaption>
+      </figure>
+      <div class="hero-card">
+        <p class="hero-card-t" data-eb-editable="text" data-eb-key="index.p.19" data-eb-role="p" data-eb-kind="text">Hoy en La Capilla</p>
+        <p class="hero-card-s" data-eb-editable="text" data-eb-key="index.p.20" data-eb-role="p" data-eb-kind="text">Ramen + jugo natural · combo que abraza</p>
+        <a href="#menu" data-eb-editable="link" data-eb-key="index.a.21" data-eb-role="a" data-eb-kind="link">Armar mi pedido →</a>
+      </div>
+    </div>
+  </div>
+  <div class="cinta" aria-hidden="true"><span>Hamburguesas · Ramen · Dumplings · Jugos · Cola fría · Flan de la casa · </span><span>Hamburguesas · Ramen · Dumplings · Jugos · Cola fría · Flan de la casa · </span></div>
+</section>
 
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.21" data-eb-role="h2" data-eb-kind="text">Galería de Ambiente</h2>
-            <img src="https://images.pexels.com/photos/9250721/pexels-photo-9250721.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                 alt="Ambiance gallery" class="gallery-image" data-eb-editable="image" data-eb-key="index.img.22" data-eb-role="img" data-eb-kind="image">
-        </div>
-    </section>
+<!-- NOSOTROS -->
+<section class="section" id="nosotros">
+  <div class="wrap grid-2">
+    <div class="stack-imgs">
+      <img class="img-main" src="https://images.pexels.com/photos/11209052/pexels-photo-11209052.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Cocina rústica en preparación, hamburguesas a la parrilla con fuego" loading="lazy" data-eb-editable="image" data-eb-key="index.img.22" data-eb-role="img" data-eb-kind="image">
+      <img class="img-sub" src="https://images.pexels.com/photos/14965698/pexels-photo-14965698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior rústico La Capilla Monterrey con mesas de madera y luz cálida" loading="lazy" data-eb-editable="image" data-eb-key="index.img.23" data-eb-role="img" data-eb-kind="image">
+      <p class="sello" data-eb-editable="text" data-eb-key="index.p.24" data-eb-role="p" data-eb-kind="text">Fuego · Madera · Recetas honestas</p>
+    </div>
+    <div>
+      <p class="kicker2" data-eb-editable="text" data-eb-key="index.p.25" data-eb-role="p" data-eb-kind="text">Nuestra casa</p>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.26" data-eb-role="h2" data-eb-kind="text">Comida para llevar, para comer en el sitio o a domicilio.</h2>
+      <p class="muted" data-eb-editable="text" data-eb-key="index.p.27" data-eb-role="p" data-eb-kind="text">Somos <strong>La Capilla</strong>, un restaurante pequeño y cálido en <strong>Monterrey</strong>. Cocinamos a la vista, servimos generoso y empacamos bonito para que llegue caliente a casa. Sin vueltas: eliges, agregas al carrito y lo mandas por WhatsApp.</p>
+      <div class="feats">
+        <article><h3 data-eb-editable="text" data-eb-key="index.h3.28" data-eb-role="h3" data-eb-kind="text">Para comer aquí</h3><p data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">Mesas de madera, luz cálida y trato de barrio. Ven con hambre.</p></article>
+        <article><h3 data-eb-editable="text" data-eb-key="index.h3.30" data-eb-role="h3" data-eb-kind="text">Para llevar</h3><p data-eb-editable="text" data-eb-key="index.p.31" data-eb-role="p" data-eb-kind="text">Empaque ecológico que aguanta el camino sin perder lo crujiente.</p></article>
+        <article><h3 data-eb-editable="text" data-eb-key="index.h3.32" data-eb-role="h3" data-eb-kind="text">A domicilio</h3><p data-eb-editable="text" data-eb-key="index.p.33" data-eb-role="p" data-eb-kind="text">Pide por WhatsApp y coordinamos entrega en la zona.</p></article>
+      </div>
+      <div class="row">
+        <a class="btn btn-primary" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20pedir%20a%20domicilio" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.34" data-eb-role="a" data-eb-kind="link">Pedir a domicilio</a>
+        <span class="horario">Lunes a sábado · 10:00 – 20:00</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section id="menu" class="menu">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.23" data-eb-role="h2" data-eb-kind="text">Nuestro Menú</h2>
-            <div class="menu-items">
-                <article class="menu-item">
-                    <img src="https://images.pexels.com/photos/5374419/pexels-photo-5374419.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                         alt="Menu item hamburger" class="menu-image" data-eb-editable="image" data-eb-key="index.img.24" data-eb-role="img" data-eb-kind="image">
-                    <div class="menu-info">
-                        <h3 data-eb-editable="text" data-eb-key="index.h3.25" data-eb-role="h3" data-eb-kind="text">Hamburguesa</h3>
-                        <p data-eb-editable="text" data-eb-key="index.p.26" data-eb-role="p" data-eb-kind="text">Jugosa hamburguesa de carne, lechuga, tomate y queso.</p>
-                        <span class="price">$120</span>
-                    </div>
-                </article>
-                <article class="menu-item">
-                    <img src="https://images.pexels.com/photos/884600/pexels-photo-884600.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                         alt="Menu item ramen" class="menu-image" data-eb-editable="image" data-eb-key="index.img.27" data-eb-role="img" data-eb-kind="image">
-                    <div class="menu-info">
-                        <h3 data-eb-editable="text" data-eb-key="index.h3.28" data-eb-role="h3" data-eb-kind="text">Ramen</h3>
-                        <p data-eb-editable="text" data-eb-key="index.p.29" data-eb-role="p" data-eb-kind="text">Ramen tradicional con chashu, huevo marinado y vegetales.</p>
-                        <span class="price">$140</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+<!-- MENU / TIENDA LIGERA -->
+<section class="section section-menu" id="menu">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="kicker2" data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Tienda ligera</p>
+        <h2 data-eb-editable="text" data-eb-key="index.h2.36" data-eb-role="h2" data-eb-kind="text">Menú para armar tu pedido</h2>
+        <p class="muted" data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Toca <strong>Agregar</strong>, ajusta cantidades en el carrito y finaliza por <strong>WhatsApp</strong>. Precios en pesos mexicanos.</p>
+      </div>
+      <div class="filters" role="tablist" aria-label="Filtrar por categoría">
+        <button class="chip active" data-filter="todo" data-eb-editable="link" data-eb-key="index.button.38" data-eb-role="button" data-eb-kind="link">Todo</button>
+        <button class="chip" data-filter="rapida" data-eb-editable="link" data-eb-key="index.button.39" data-eb-role="button" data-eb-kind="link">Comida rápida</button>
+        <button class="chip" data-filter="bebidas" data-eb-editable="link" data-eb-key="index.button.40" data-eb-role="button" data-eb-kind="link">Bebidas</button>
+        <button class="chip" data-filter="postres" data-eb-editable="link" data-eb-key="index.button.41" data-eb-role="button" data-eb-kind="link">Postres</button>
+      </div>
+    </div>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.30" data-eb-role="h2" data-eb-kind="text">Sobre Nosotros</h2>
-            <img src="https://images.pexels.com/photos/33454120/pexels-photo-33454120.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                 alt="Restaurant interior" class="about-image" data-eb-editable="image" data-eb-key="index.img.31" data-eb-role="img" data-eb-kind="image">
-            <p data-eb-editable="text" data-eb-key="index.p.32" data-eb-role="p" data-eb-kind="text">En La Capilla ofrecemos comida rápida y bebidas con un toque rústico. Nuestro objetivo es vender por WhatsApp y contar con un CRM para administrar los pedidos. Abrimos de lunes a sábado de 10:00 a 20:00.</p>
+    <div class="menu-grid" id="menuGrid">
+      <article class="card" data-cat="rapida" data-id="hamburguesa" data-name="Hamburguesa clásica de la casa" data-price="129">
+        <div class="card-media"><img src="https://images.pexels.com/photos/5609525/pexels-photo-5609525.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Hamburguesa clásica de la casa en tabla de madera rústica" loading="lazy" data-eb-editable="image" data-eb-key="index.img.42" data-eb-role="img" data-eb-kind="image"><span class="tag">La favorita</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.43" data-eb-role="h3" data-eb-kind="text">Hamburguesa clásica de la casa</h3><span class="price">$129</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.44" data-eb-role="p" data-eb-kind="text">Carne a la parrilla, queso fundido, lechuga, jitomate y pan suave. Con papas rústicas.</p>
+          <div class="card-foot"><span class="mini">Comida rápida</span><button class="btn btn-add" data-add="hamburguesa" data-eb-editable="link" data-eb-key="index.button.45" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
         </div>
-    </section>
+      </article>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.33" data-eb-role="h2" data-eb-kind="text">Contacto</h2>
-            <img src="https://images.pexels.com/photos/19676137/pexels-photo-19676137.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
-                 alt="Restaurant facade" class="contact-image" data-eb-editable="image" data-eb-key="index.img.34" data-eb-role="img" data-eb-kind="image">
-            <p data-eb-editable="text" data-eb-key="index.p.35" data-eb-role="p" data-eb-kind="text">Dirección: Monterrey, México</p>
-            <p data-eb-editable="text" data-eb-key="index.p.36" data-eb-role="p" data-eb-kind="text">Teléfono: 3423432324</p>
-            <p data-eb-editable="text" data-eb-key="index.p.37" data-eb-role="p" data-eb-kind="text">Horario: Lunes a sábado de 10:00 a 20:00</p>
-            <p data-eb-editable="text" data-eb-key="index.p.38" data-eb-role="p" data-eb-kind="text">Síguenos en <a href="https://facebook.com/tiendatechnova" target="_blank" data-eb-editable="link" data-eb-key="index.a.39" data-eb-role="a" data-eb-kind="link">Facebook</a> y <a href="https://instagram.com/tiendatechnova" target="_blank" data-eb-editable="link" data-eb-key="index.a.40" data-eb-role="a" data-eb-kind="link">Instagram</a></p>
+      <article class="card" data-cat="rapida" data-id="ramen" data-name="Ramen caliente" data-price="149">
+        <div class="card-media"><img src="https://images.pexels.com/photos/31393431/pexels-photo-31393431.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Tazón de ramen caliente con huevo, cebollín y palillos" loading="lazy" data-eb-editable="image" data-eb-key="index.img.46" data-eb-role="img" data-eb-kind="image"><span class="tag tag-2">Caldoso</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.47" data-eb-role="h3" data-eb-kind="text">Ramen caliente</h3><span class="price">$149</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.48" data-eb-role="p" data-eb-kind="text">Caldo profundo, fideos, huevo cocido, cebollín y cerdo suave. Para días de antojo serio.</p>
+          <div class="card-foot"><span class="mini">Comida rápida</span><button class="btn btn-add" data-add="ramen" data-eb-editable="link" data-eb-key="index.button.49" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
         </div>
-    </section>
+      </article>
 
-    <!-- Comentarios y reseñas -->
-    <section id="comments" class="comments-section">
-        <div class="container">
-            <h2 data-eb-editable="text" data-eb-key="index.h2.41" data-eb-role="h2" data-eb-kind="text">Opiniones y Comentarios</h2>
-            <p data-eb-editable="text" data-eb-key="index.p.42" data-eb-role="p" data-eb-kind="text">Inicia sesión con tu cuenta de Google para guardar tu nombre, dejar una calificación con estrellas y publicar tu comentario. Tu teléfono es opcional y solo será visible para ti.</p>
-            <!-- Perfil del usuario (renderizado por comments.js) -->
-            <div data-itm-profile data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
-            <!-- Contenedor de comentarios -->
-            <div data-itm-comments-shell>
-                <div data-itm-comments data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
-            </div>
+      <article class="card" data-cat="rapida" data-id="dumplings" data-name="Dumplings gyozas (8 pzas)" data-price="119">
+        <div class="card-media"><img src="https://images.pexels.com/photos/7363965/pexels-photo-7363965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Dumplings gyozas en preparación artesanal sobre mesa de madera" loading="lazy" data-eb-editable="image" data-eb-key="index.img.50" data-eb-role="img" data-eb-kind="image"></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.51" data-eb-role="h3" data-eb-kind="text">Dumplings gyozas · 8 pzas</h3><span class="price">$119</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.52" data-eb-role="p" data-eb-kind="text">Relleno jugoso, doblado a mano, con salsa de la casa. Al vapor o doraditos.</p>
+          <div class="card-foot"><span class="mini">Comida rápida</span><button class="btn btn-add" data-add="dumplings" data-eb-editable="link" data-eb-key="index.button.53" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
         </div>
-    </section>
+      </article>
 
-    <footer class="site-footer">
-        <div class="container">
-            <p data-eb-editable="text" data-eb-key="index.p.43" data-eb-role="p" data-eb-kind="text">&copy; <span id="year"></span> La Capilla. Todos los derechos reservados.</p>
-            <img src="https://itm-void-excepcional.pages.dev/media-fallback/imagen-generica.jpg"
-                 alt="Decorative icon" class="footer-icon" data-eb-editable="image" data-eb-key="index.img.44" data-eb-role="img" data-eb-kind="image">
+      <article class="card" data-cat="bebidas" data-id="jugos" data-name="Jugos naturales" data-price="65">
+        <div class="card-media"><img src="https://images.pexels.com/photos/2479242/pexels-photo-2479242.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Jugos naturales frescos de frutos rojos en mesa rústica" loading="lazy" data-eb-editable="image" data-eb-key="index.img.54" data-eb-role="img" data-eb-kind="image"><span class="tag tag-3">Natural</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.55" data-eb-role="h3" data-eb-kind="text">Jugos naturales</h3><span class="price">$65</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.56" data-eb-role="p" data-eb-kind="text">Fruta fresca del día: fresa, frutos rojos o mezcla de la casa. Sin jarabes.</p>
+          <div class="card-foot"><span class="mini">Bebidas</span><button class="btn btn-add" data-add="jugos" data-eb-editable="link" data-eb-key="index.button.57" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
         </div>
-    </footer>
+      </article>
 
-    <script src="https://itm-void-excepcional.pages.dev/comments.js"></script>
-    <script src="script.js"></script>
+      <article class="card" data-cat="bebidas" data-id="refresco" data-name="Refresco cola con hielo" data-price="40">
+        <div class="card-media"><img src="https://images.pexels.com/photos/20177323/pexels-photo-20177323.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Refresco cola con hielo en vasos escarchados sobre mesa rústica" loading="lazy" data-eb-editable="image" data-eb-key="index.img.58" data-eb-role="img" data-eb-kind="image"></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.59" data-eb-role="h3" data-eb-kind="text">Refresco cola con hielo</h3><span class="price">$40</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.60" data-eb-role="p" data-eb-kind="text">Bien fría, con mucho hielo. La compañera oficial de la hamburguesa.</p>
+          <div class="card-foot"><span class="mini">Bebidas</span><button class="btn btn-add" data-add="refresco" data-eb-editable="link" data-eb-key="index.button.61" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
+        </div>
+      </article>
+
+      <article class="card" data-cat="postres" data-id="postre" data-name="Postre de la casa (flan)" data-price="75">
+        <div class="card-media"><img src="https://images.pexels.com/photos/10918153/pexels-photo-10918153.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Postre de la casa, flan casero con caramelo en charola de madera" loading="lazy" data-eb-editable="image" data-eb-key="index.img.62" data-eb-role="img" data-eb-kind="image"><span class="tag">Dulce final</span></div>
+        <div class="card-body">
+          <div class="card-top"><h3 data-eb-editable="text" data-eb-key="index.h3.63" data-eb-role="h3" data-eb-kind="text">Postre de la casa · flan</h3><span class="price">$75</span></div>
+          <p data-eb-editable="text" data-eb-key="index.p.64" data-eb-role="p" data-eb-kind="text">Flan cremoso con caramelo, receta casera. Cierra la comida como se debe.</p>
+          <div class="card-foot"><span class="mini">Postres</span><button class="btn btn-add" data-add="postre" data-eb-editable="link" data-eb-key="index.button.65" data-eb-role="button" data-eb-kind="link">Agregar</button></div>
+        </div>
+      </article>
+    </div>
+
+    <p class="nota" data-eb-editable="text" data-eb-key="index.p.66" data-eb-role="p" data-eb-kind="text">¿Algo especial? Escríbelo en el mensaje de WhatsApp al finalizar: sin cebolla, extra queso, término, picante aparte, etc.</p>
+  </div>
+</section>
+
+<!-- COMO PEDIR -->
+<section class="section" id="como-pedir">
+  <div class="wrap">
+    <p class="kicker2" data-eb-editable="text" data-eb-key="index.p.67" data-eb-role="p" data-eb-kind="text">Pedido por WhatsApp tipo carrito</p>
+    <h2 data-eb-editable="text" data-eb-key="index.h2.68" data-eb-role="h2" data-eb-kind="text">Pide en 3 pasos, sin apps raras</h2>
+    <div class="steps">
+      <article class="step"><span class="n">1</span><h3 data-eb-editable="text" data-eb-key="index.h3.69" data-eb-role="h3" data-eb-kind="text">Selecciona</h3><p data-eb-editable="text" data-eb-key="index.p.70" data-eb-role="p" data-eb-kind="text">Agrega hamburguesas, ramen, dumplings, bebidas y postre al carrito.</p></article>
+      <article class="step"><span class="n">2</span><h3 data-eb-editable="text" data-eb-key="index.h3.71" data-eb-role="h3" data-eb-kind="text">Revisa</h3><p data-eb-editable="text" data-eb-key="index.p.72" data-eb-role="p" data-eb-kind="text">Ajusta cantidades, elige comer aquí, para llevar o a domicilio.</p></article>
+      <article class="step"><span class="n">3</span><h3 data-eb-editable="text" data-eb-key="index.h3.73" data-eb-role="h3" data-eb-kind="text">Envía por WhatsApp</h3><p data-eb-editable="text" data-eb-key="index.p.74" data-eb-role="p" data-eb-kind="text">Tu pedido llega redactado a nuestro WhatsApp <a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.75" data-eb-role="a" data-eb-kind="link">342 343 2324</a>. Lo confirmamos al momento.</p></article>
+    </div>
+    <div class="row"><button class="btn btn-primary" id="openCart2" data-eb-editable="link" data-eb-key="index.button.76" data-eb-role="button" data-eb-kind="link">Ver mi carrito</button><a class="btn btn-ghost" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.77" data-eb-role="a" data-eb-kind="link">Abrir WhatsApp directo</a></div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="section section-galeria" id="galeria">
+  <div class="wrap">
+    <p class="kicker2" data-eb-editable="text" data-eb-key="index.p.78" data-eb-role="p" data-eb-kind="text">El ambiente</p>
+    <h2 data-eb-editable="text" data-eb-key="index.h2.79" data-eb-role="h2" data-eb-kind="text">Así se vive La Capilla</h2>
+    <div class="gal">
+      <figure><img src="https://images.pexels.com/photos/20400373/pexels-photo-20400373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Comer en el sitio, personas compartiendo en restaurante acogedor" loading="lazy" data-eb-editable="image" data-eb-key="index.img.80" data-eb-role="img" data-eb-kind="image"><figcaption>Comer en el sitio</figcaption></figure>
+      <figure><img src="https://images.pexels.com/photos/33673831/pexels-photo-33673831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Comida para llevar y a domicilio en empaques de papel sobre madera" loading="lazy" data-eb-editable="image" data-eb-key="index.img.81" data-eb-role="img" data-eb-kind="image"><figcaption>Para llevar y a domicilio</figcaption></figure>
+      <figure><img src="https://images.pexels.com/photos/14965698/pexels-photo-14965698.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Interior rústico con mobiliario de madera y luz cálida" loading="lazy" data-eb-editable="image" data-eb-key="index.img.82" data-eb-role="img" data-eb-kind="image"><figcaption>Nuestro rincón rústico</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- VISITANOS -->
+<section class="section" id="visitanos">
+  <div class="wrap grid-2">
+    <div>
+      <p class="kicker2" data-eb-editable="text" data-eb-key="index.p.83" data-eb-role="p" data-eb-kind="text">Visítanos</p>
+      <h2 data-eb-editable="text" data-eb-key="index.h2.84" data-eb-role="h2" data-eb-kind="text">Estamos en Monterrey</h2>
+      <ul class="datos">
+        <li><strong>Horario:</strong> Lunes a sábado de 10:00 a 20:00</li>
+        <li><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/523423432324" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.85" data-eb-role="a" data-eb-kind="link">342 343 2324</a></li>
+        <li><strong>Modalidades:</strong> Comer en el sitio · Para llevar · A domicilio</li>
+        <li><strong>Síguenos:</strong> <a href="https://facebook.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.86" data-eb-role="a" data-eb-kind="link">Facebook</a> · <a href="https://instagram.com/tiendatechnova" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.87" data-eb-role="a" data-eb-kind="link">Instagram</a></li>
+      </ul>
+      <div class="row">
+        <a class="btn btn-primary" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20reservar%20mesa" target="_blank" rel="noopener" data-eb-editable="link" data-eb-key="index.a.88" data-eb-role="a" data-eb-kind="link">Reservar por WhatsApp</a>
+        <a class="btn btn-ghost" href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.89" data-eb-role="a" data-eb-kind="link">Llamar</a>
+      </div>
+    </div>
+    <div class="map-box">
+      <iframe title="Mapa La Capilla Monterrey" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60080.29249353073!2d-89.95960567229005!3d19.754377909211858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f57e530bd60abf9%3A0xc1f5251d7481d%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- OPINIONES / RESEÑAS -->
+<section class="section section-opi" id="opiniones" data-itm-comments-shell>
+  <div class="wrap">
+    <p class="kicker2 kicker-light" data-eb-editable="text" data-eb-key="index.p.90" data-eb-role="p" data-eb-kind="text">Reseñas y comentarios</p>
+    <h2 class="light" data-eb-editable="text" data-eb-key="index.h2.91" data-eb-role="h2" data-eb-kind="text">Cuéntanos cómo te fue en La Capilla</h2>
+    <p class="opi-intro" data-eb-editable="text" data-eb-key="index.p.92" data-eb-role="p" data-eb-kind="text">Tu opinión nos ayuda a cocinar mejor. Aquí puedes <strong>iniciar sesión con Google</strong>, <strong>guardar tu nombre</strong>, agregar un <strong>teléfono opcional y privado</strong>, <strong>cerrar sesión</strong> cuando quieras, <strong>calificar con estrellas</strong> y <strong>publicar tu comentario</strong>. Publicamos solo tu nombre, <strong>nunca tu teléfono</strong>. Puedes <strong>editar o eliminar</strong> tus propios comentarios.</p>
+
+    <div class="opi-grid">
+      <div class="opi-card">
+        <h3 data-eb-editable="text" data-eb-key="index.h3.93" data-eb-role="h3" data-eb-kind="text">Tu perfil de visitante</h3>
+        <p class="muted small" data-eb-editable="text" data-eb-key="index.p.94" data-eb-role="p" data-eb-kind="text">Inicia sesión, confirma cómo quieres aparecer y guarda un teléfono solo para contacto interno si lo deseas.</p>
+        <div data-itm-profile data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
+        <ul class="opi-list">
+          <li>Acceso con Google, sin contraseñas nuevas</li>
+          <li>Nombre público + teléfono privado opcional</li>
+          <li>Cierra sesión en un clic</li>
+        </ul>
+      </div>
+      <div class="opi-card opi-card-wide">
+        <h3 data-eb-editable="text" data-eb-key="index.h3.95" data-eb-role="h3" data-eb-kind="text">Opiniones de la casa</h3>
+        <p class="muted small" data-eb-editable="text" data-eb-key="index.p.96" data-eb-role="p" data-eb-kind="text">Califica con estrellas, escribe tu experiencia y léela junto a la de otros comensales. Los comentarios pasan por moderación.</p>
+        <div data-itm-comments data-project-id="9abca07c-34dc-4859-b03d-2724b5d64635"></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-grid">
+    <div><p class="foot-brand" data-eb-editable="text" data-eb-key="index.p.97" data-eb-role="p" data-eb-kind="text">La Capilla</p><p class="small" data-eb-editable="text" data-eb-key="index.p.98" data-eb-role="p" data-eb-kind="text">Cocina rústica en Monterrey · Lun–Sáb 10:00–20:00 · <a href="tel:+523423432324" data-eb-editable="link" data-eb-key="index.a.99" data-eb-role="a" data-eb-kind="link">342 343 2324</a></p></div>
+    <div class="small">Fotos: Pexels (Mohamed Olwy, Italo Melo, Matheus Bertelli, Angela Roma, Ylanite Koppens, Sanjay Indiresh, SimplyArt4794, Sarda Bamberg, Gera Cejas, Pedro Furtado, Derwin Edwards). Licencia Pexels.</div>
+    <div class="small">© <span id="year"></span> La Capilla · Hecho con fuego y madera.</div>
+  </div>
+</footer>
+
+<!-- CARRITO -->
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-hidden="true" aria-label="Carrito de pedido">
+  <div class="drawer-head"><h2 data-eb-editable="text" data-eb-key="index.h2.100" data-eb-role="h2" data-eb-kind="text">Tu pedido</h2><button id="closeCart" aria-label="Cerrar carrito" data-eb-editable="link" data-eb-key="index.button.101" data-eb-role="button" data-eb-kind="link">✕</button></div>
+  <label class="field">Modalidad
+    <select id="modality"><option>Comer en el sitio</option><option>Para llevar</option><option>A domicilio</option></select>
+  </label>
+  <label class="field">Tu nombre (opcional)
+    <input id="custName" type="text" placeholder="Ej. Ana" autocomplete="name">
+  </label>
+  <div class="items" id="cartItems"></div>
+  <label class="field">Notas (opcional)
+    <textarea id="custNotes" rows="2" placeholder="Sin cebolla, extra queso, picante aparte..."></textarea>
+  </label>
+  <div class="total-row"><span>Total</span><strong id="cartTotal">$0</strong></div>
+  <button class="btn btn-primary btn-block" id="checkout" data-eb-editable="link" data-eb-key="index.button.102" data-eb-role="button" data-eb-kind="link">Enviar pedido por WhatsApp</button>
+  <button class="btn btn-ghost btn-block" id="clearCart" data-eb-editable="link" data-eb-key="index.button.103" data-eb-role="button" data-eb-kind="link">Vaciar</button>
+</aside>
+<a class="wa-float" href="https://wa.me/523423432324?text=Hola%20La%20Capilla%2C%20quiero%20hacer%20un%20pedido" target="_blank" rel="noopener" aria-label="Pedir por WhatsApp" data-eb-editable="link" data-eb-key="index.a.104" data-eb-role="a" data-eb-kind="link">WhatsApp</a>
+
+<script src="script.js" defer></script>
+<script src="https://itm-void-excepcional.pages.dev/comments.js" defer></script>
 </body>
 </html>
