@@ -1,92 +1,93 @@
-/**
- * La Capilla - Interacciones del sitio
- */
+const WA_NUMBER = "523423432324";
+const cart = new Map(); // id -> {name, price, qty}
 
-(function () {
-  'use strict';
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const money = n => "$" + n.toFixed(0);
 
-  // Navegacion mobile
-  var toggle = document.getElementById('navToggle');
-  var links = document.getElementById('navLinks');
-  var nav = document.getElementById('nav');
-
-  if (toggle && links) {
-    toggle.addEventListener('click', function () {
-      links.classList.toggle('active');
-      toggle.classList.toggle('active');
-    });
-
-    links.querySelectorAll('a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        links.classList.remove('active');
-        toggle.classList.remove('active');
-      });
-    });
+function updateCartUI(){
+  const items = $("#cartItems");
+  const count = [...cart.values()].reduce((a,i)=>a+i.qty,0);
+  const total = [...cart.values()].reduce((a,i)=>a+i.qty*i.price,0);
+  $("#cartCount").textContent = count;
+  $("#cartTotal").textContent = money(total);
+  items.innerHTML = "";
+  if(cart.size===0){
+    items.innerHTML = "<li><div><strong>Carrito vacío</strong><br><span class='muted small'>Agrega hamburguesas, ramen, dumplings, bebidas o postres.</span></div></li>";
+    return;
   }
-
-  // Nav background on scroll
-  if (nav) {
-    window.addEventListener('scroll', function () {
-      if (window.scrollY > 40) {
-        nav.style.background = 'rgba(26, 18, 16, 0.98)';
-      } else {
-        nav.style.background = 'rgba(26, 18, 16, 0.95)';
-      }
-    });
+  for(const [id,it] of cart){
+    const li = document.createElement("li");
+    li.innerHTML = `<div><strong></strong><br><span class="muted small"></span></div>
+      <div class="qty"><button data-act="dec" aria-label="Quitar uno">−</button><span></span><button data-act="inc" aria-label="Agregar uno">+</button></div>`;
+    li.querySelector("strong").textContent = it.name;
+    li.querySelector(".muted").textContent = money(it.price) + " c/u · " + money(it.price*it.qty);
+    li.querySelector(".qty span").textContent = it.qty;
+    li.querySelector('[data-act="inc"]').onclick = ()=>{ it.qty++; updateCartUI(); };
+    li.querySelector('[data-act="dec"]').onclick = ()=>{ it.qty--; if(it.qty<=0) cart.delete(id); updateCartUI(); };
+    items.appendChild(li);
   }
+}
 
-  // Scroll reveal animation
-  var observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
+function openCart(){ $("#cartDrawer").hidden=false; $("#cartBackdrop").hidden=false; }
+function closeCart(){ $("#cartDrawer").hidden=true; $("#cartBackdrop").hidden=true; }
+
+document.addEventListener("DOMContentLoaded", ()=>{
+  updateCartUI();
+  $$("#productGrid .add").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const card = btn.closest(".card");
+      const id = card.dataset.id, name = card.dataset.name, price = Number(card.dataset.price);
+      const cur = cart.get(id) || {name, price, qty:0};
+      cur.qty++; cart.set(id, cur);
+      updateCartUI(); openCart();
+    });
+  });
+  $("#openCart").onclick = openCart;
+  const on2 = $("#orderNow"); if(on2) on2.onclick = openCart;
+  $("#closeCart").onclick = closeCart;
+  $("#cartBackdrop").onclick = closeCart;
+  document.addEventListener("keydown", e=>{ if(e.key==="Escape") closeCart(); });
+  $("#clearCart").onclick = ()=>{ cart.clear(); updateCartUI(); };
+
+  $("#checkoutWa").onclick = ()=>{
+    if(cart.size===0){ alert("Tu carrito está vacío. Agrega algo del menú primero."); return; }
+    const name = ($("#buyerName").value||"").trim();
+    const type = $("#deliveryType").value;
+    const lines = [...cart.values()].map(i=>`• ${i.qty}× ${i.name} — ${money(i.price*i.qty)}`);
+    const total = [...cart.values()].reduce((a,i)=>a+i.qty*i.price,0);
+    const msg = `Hola La Capilla, quiero hacer un pedido:%0A${encodeURIComponent(lines.join("\n"))}%0ATotal estimado: ${money(total)}%0ATipo: ${encodeURIComponent(type)}${name?`%0ANombre: ${encodeURIComponent(name)}`:""}%0AGracias.`;
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`,"_blank","noopener");
   };
 
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, observerOptions);
-
-  var revealTargets = document.querySelectorAll(
-    '.card, .about__grid, .gallery__item, .cta__content, .reviews__shell, .footer__inner'
-  );
-
-  revealTargets.forEach(function (el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
+  // filtros
+  $$(".chip").forEach(ch=>{
+    ch.onclick = ()=>{
+      $$(".chip").forEach(c=>c.classList.remove("active"));
+      ch.classList.add("active");
+      const f = ch.dataset.filter;
+      $$("#productGrid .card").forEach(card=>{
+        const cats = (card.dataset.cat||"").split(" ");
+        card.style.display = (f==="all"||cats.includes(f)) ? "" : "none";
+      });
+    };
   });
 
-  // Inject revealed style
-  var style = document.createElement('style');
-  style.textContent = '.revealed{opacity:1!important;transform:translateY(0)!important;}';
-  document.head.appendChild(style);
+  // nav móvil
+  const t = $("#menuToggle"), m = $("#mobileNav");
+  t.onclick = ()=>{ const o = m.classList.toggle("open"); t.setAttribute("aria-expanded", o); };
+  $$("#mobileNav a").forEach(a=>a.onclick=()=>m.classList.remove("open"));
 
-  // Active nav link highlight on scroll
-  var sections = document.querySelectorAll('section[id], header[id], footer[id]');
-  var navLinksAll = document.querySelectorAll('.nav__links a');
+  // formulario rápido -> WhatsApp
+  $("#quickForm").addEventListener("submit", e=>{
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const txt = `Hola La Capilla, soy ${fd.get("nombre")} (${fd.get("tipo")}). Mi antojo: ${fd.get("notas")||"ver menú"}. ¿Me confirmas tiempo y total?`;
+    $("#quickMsg").textContent = "Abriendo WhatsApp con tu mensaje…";
+    window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(txt)}`,"_blank","noopener");
+  });
 
-  function highlightNav() {
-    var scrollPos = window.scrollY + 120;
-    sections.forEach(function (section) {
-      var top = section.offsetTop;
-      var height = section.offsetHeight;
-      var id = section.getAttribute('id');
-      if (scrollPos >= top && scrollPos < top + height) {
-        navLinksAll.forEach(function (link) {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === '#' + id) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }
-
-  window.addEventListener('scroll', highlightNav);
-  highlightNav();
-})();
+  // sombra topbar
+  const bar = $("#topbar");
+  addEventListener("scroll", ()=>{ bar.style.boxShadow = scrollY>8 ? "0 6px 24px rgba(60,32,12,.12)" : "none"; }, {passive:true});
+});
